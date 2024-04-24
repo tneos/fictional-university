@@ -105,6 +105,24 @@ function university_post_types() {
         ),
         'menu_icon' => 'dashicons-heart'
     ));
+     
+    // Slide show type
+    register_post_type('slide', array(
+        'supports' => array('title', 'excerpt', 'thumbnail'),
+        'public' => false,
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-slides',
+        'labels' => array(
+            'name' => 'Slides',
+            'add_new_item' => 'Add New Slide',
+            'edit_item' => 'Edit Slide',
+            'all_items' => 'All Slides',
+            'singular_name' => 'Slide',
+            'add_new' => 'Add new Slide'
+        )
+
+    ));
 }
 add_action('init', 'university_post_types');
 ?>
