@@ -20,7 +20,7 @@
  */
 
 // ** Database settings - You can get this info from your web host ** //
-if(strstr($_SERVER['SERVER_NAME'], 'fictional-university.local')) {
+ if(strstr($_SERVER['SERVER_NAME'], 'fictional-university.local')) {
     /** The name of the database for WordPress */
 define( 'DB_NAME', 'local' );
 
@@ -98,6 +98,7 @@ if ( ! defined( 'WP_DEBUG' ) ) {
 }
 
 
+
 define('AUTH_KEY',         'vZTHNGTJEMUUpgLYOuOenrh4kuWEnON02L1QbXPA9lPwMgT87U/4pF3OztVavVVsXctXGg0ocK0TQEn4aKTLMA==');
 define('SECURE_AUTH_KEY',  'Td9h0OdN82kZsdFSny3yjsffrmhES+IaH4Eo4KPxmVNbS9tisygSbSJbMzr5y34USW+TE6+ZUOfirYx0RNDcIA==');
 define('LOGGED_IN_KEY',    'N4nerrbXOGZrwzdmC+Mv1wvvcVyIvZ+b/DZMqCzjZC8B02975oTLlqSqURxNZGNQRDaHY4+ojhv4TVQGeBMLCQ==');
@@ -108,6 +109,7 @@ define('LOGGED_IN_SALT',   'eWoHsQ95AYvBRlEn98n9G7Z24Zjoaj3uH/lnrjQIxZN1eqj3LYpG
 define('NONCE_SALT',       'Lyrmgdoy/R1DpvF7sUmomf9vXSKPZQ/KXP6CqXV7hBlsHDymOzfcG1o4L/bO91BCgUFOHhHs5kJtUBU0bj0mUw==');
 define( 'WP_ENVIRONMENT_TYPE', 'local' );
 define('GOOGLE_MAPS_API', 'AIzaSyC4ezRI0c1L26K6NqL7QNUxxF23IUy0hfI');
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
