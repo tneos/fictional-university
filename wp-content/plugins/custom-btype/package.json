@@ -1,0 +1,17 @@
+{
+  "name": "custom-btype",
+  "version": "1.0.0",
+  "main": "test.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@wordpress/scripts": "^27.9.0"
+  }
+}
