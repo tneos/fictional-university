@@ -2,23 +2,31 @@ wp.blocks.registerBlockType("plugins/custom-btype", {
   title: "Custom block type",
   icon: "smiley",
   category: "common",
-  edit: function () {
+  attributes: {
+    skyColor: {type: "string"},
+    grassColor: {type: "string"},
+  },
+  edit: props => {
+    const updateSkyColor = event => {
+      props.setAttributes({skyColor: event.target.value});
+    };
+    const updateGrassColor = event => {
+      props.setAttributes({grassColor: event.target.value});
+    };
     return (
       <div>
-        <h4>First Paragraph</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reiciendis magni
-          perferendis dolor in recusandae accusantium repudiandae consequatur possimus quia sint
-          vitae incidunt quaerat amet ex praesentium, ut aliquam doloribus.
-        </p>
+        <input type="text" placeholder="sky colour" onChange={updateSkyColor} />
+        <input type="text" placeholder="grass colour" onChange={updateGrassColor} />
       </div>
     );
   },
-  save: () => {
+  save: props => {
     return (
       <>
-        <h3>Front end title</h3>
-        <h5>This is the front-end!!</h5>
+        <h3>
+          Today the sky is {props.attributes.skyColor} and the grass is{" "}
+          {props.attributes.grassColor}
+        </h3>
       </>
     );
   },

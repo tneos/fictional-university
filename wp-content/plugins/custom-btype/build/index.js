@@ -92,11 +92,37 @@ wp.blocks.registerBlockType("plugins/custom-btype", {
   title: "Custom block type",
   icon: "smiley",
   category: "common",
-  edit: function () {
-    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, "First Paragraph"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reiciendis magni perferendis dolor in recusandae accusantium repudiandae consequatur possimus quia sint vitae incidunt quaerat amet ex praesentium, ut aliquam doloribus."));
+  attributes: {
+    skyColor: {
+      type: "string"
+    },
+    grassColor: {
+      type: "string"
+    }
   },
-  save: () => {
-    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Front end title"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h5", null, "This is the front-end!!"));
+  edit: props => {
+    const updateSkyColor = event => {
+      props.setAttributes({
+        skyColor: event.target.value
+      });
+    };
+    const updateGrassColor = event => {
+      props.setAttributes({
+        grassColor: event.target.value
+      });
+    };
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      placeholder: "sky colour",
+      onChange: updateSkyColor
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      placeholder: "grass colour",
+      onChange: updateGrassColor
+    }));
+  },
+  save: props => {
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Today the sky is ", props.attributes.skyColor, " and the grass is", " ", props.attributes.grassColor));
   }
 });
 /******/ })()
