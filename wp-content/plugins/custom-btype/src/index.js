@@ -15,19 +15,22 @@ wp.blocks.registerBlockType("plugins/custom-btype", {
     };
     return (
       <div>
-        <input type="text" placeholder="sky colour" onChange={updateSkyColor} />
-        <input type="text" placeholder="grass colour" onChange={updateGrassColor} />
+        <input
+          type="text"
+          placeholder="sky colour"
+          value={props.attributes.skyColor}
+          onChange={updateSkyColor}
+        />
+        <input
+          type="text"
+          placeholder="grass colour"
+          value={props.attributes.grassColor}
+          onChange={updateGrassColor}
+        />
       </div>
     );
   },
-  save: props => {
-    return (
-      <>
-        <h3>
-          Today the sky is {props.attributes.skyColor} and the grass is{" "}
-          {props.attributes.grassColor}
-        </h3>
-      </>
-    );
+  save: () => {
+    return null;
   },
 });

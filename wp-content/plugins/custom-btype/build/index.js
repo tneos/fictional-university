@@ -114,15 +114,17 @@ wp.blocks.registerBlockType("plugins/custom-btype", {
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
       type: "text",
       placeholder: "sky colour",
+      value: props.attributes.skyColor,
       onChange: updateSkyColor
     }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
       type: "text",
       placeholder: "grass colour",
+      value: props.attributes.grassColor,
       onChange: updateGrassColor
     }));
   },
-  save: props => {
-    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Today the sky is ", props.attributes.skyColor, " and the grass is", " ", props.attributes.grassColor));
+  save: () => {
+    return null;
   }
 });
 /******/ })()
