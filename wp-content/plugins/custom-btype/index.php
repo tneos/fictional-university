@@ -15,9 +15,11 @@
     }
 
     function adminAssets() {
-        wp_register_script('newblocktype', plugin_dir_url(__FILE__) . 'build/index.js', array('wp-blocks', 'wp-element'));
+        wp_register_style('custom-btype-css', plugin_dir_url(__FILE__) . 'build/index.css');
+        wp_register_script('newblocktype', plugin_dir_url(__FILE__) . 'build/index.js', array('wp-blocks', 'wp-element', 'wp-editor'));
         register_block_type("plugins/custom-btype", array(
             'editor_script' => 'newblocktype',
+            'editor_style' => 'custom-btype-css',
             'render_callback' => array($this, 'frontEndHTML')
         ));
     }

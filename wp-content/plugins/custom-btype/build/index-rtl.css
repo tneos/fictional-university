@@ -1,0 +1,26 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/index.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.container-block {
+  padding: 2rem;
+  border-radius: 2px;
+  border: 1px solid #f1f1f1;
+  background-color: #d6d6d6;
+}
+.container-block .mark-as-correct {
+  color: #ffd700;
+  position: relative;
+  top: -3px;
+  transition: transform 0.3s ease-out;
+}
+.container-block .mark-as-correct:hover {
+  transform: scale(1.25) rotate(-12deg);
+}
+.container-block .delete-btn {
+  color: #ff0000;
+  position: relative;
+  top: -5px;
+}
+.container-block .delete-btn:hover {
+  color: #c20000;
+}
